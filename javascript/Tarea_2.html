@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Número Primo</title>
+    <script>
+        function esNumeroPrimo() {
+            const numero = parseInt(document.getElementById("numeroInput").value);
+            if (numero <= 1) {
+                document.getElementById("resultado").textContent = "No es primo";
+                return;
+            }
+            for (let i = 2; i < numero; i++) {
+                if (numero % i === 0) {
+                    document.getElementById("resultado").textContent = "No es primo";
+                    return;
+                }
+            }
+            document.getElementById("resultado").textContent = "Es primo";
+        }
+    </script>
+</head>
+<body>
+    <h1>Verificar Número Primo</h1>
+    <input type="number" id="numeroInput" placeholder="Ingrese un número">
+    <button onclick="esNumeroPrimo()">Verificar</button>
+    <p>Resultado: <span id="resultado"></span></p>
+</body>
+</html>

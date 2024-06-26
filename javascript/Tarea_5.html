@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Vocales</title>
+    <script>
+        function contarVocales() {
+            const cadena = document.getElementById("cadenaInput").value;
+            const vocales = 'aeiouAEIOU';
+            let contador = 0;
+            for (let char of cadena) {
+                if (vocales.includes(char)) {
+                    contador++;
+                }
+            }
+            document.getElementById("resultado").textContent = contador;
+        }
+    </script>
+</head>
+<body>
+    <h1>Contar Vocales</h1>
+    <input type="text" id="cadenaInput" placeholder="Ingrese una cadena">
+    <button onclick="contarVocales()">Contar</button>
+    <p>Resultado: <span id="resultado"></span></p>
+</body>
+</html>

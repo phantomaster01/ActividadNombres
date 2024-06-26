@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Duplicados</title>
+    <script>
+        function eliminarDuplicados() {
+            const arreglo = document.getElementById("arregloInput").value.split(',').map(Number);
+            const sinDuplicados = [...new Set(arreglo)];
+            document.getElementById("resultado").textContent = sinDuplicados.join(', ');
+        }
+    </script>
+</head>
+<body>
+    <h1>Eliminar Duplicados</h1>
+    <input type="text" id="arregloInput" placeholder="Ingrese un arreglo de números separados por comas">
+    <button onclick="eliminarDuplicados()">Eliminar</button>
+    <p>Resultado: <span id="resultado"></span></p>
+</body>
+</html>

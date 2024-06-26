@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Máximo en Arreglo</title>
+    <script>
+        function encontrarMaximo() {
+            const arreglo = document.getElementById("arregloInput").value.split(',').map(Number);
+            let maximo = arreglo[0];
+            for (let numero of arreglo) {
+                if (numero > maximo) {
+                    maximo = numero;
+                }
+            }
+            document.getElementById("resultado").textContent = maximo;
+        }
+    </script>
+</head>
+<body>
+    <h1>Encontrar Máximo en Arreglo</h1>
+    <input type="text" id="arregloInput" placeholder="Ingrese un arreglo de números separados por comas">
+    <button onclick="encontrarMaximo()">Encontrar</button>
+    <p>Resultado: <span id="resultado"></span></p>
+</body>
+</html>
